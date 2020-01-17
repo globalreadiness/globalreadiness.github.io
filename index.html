@@ -1,358 +1,423 @@
 <!DOCTYPE html>
 <!-- saved from url=(0033)http://deep.cs.umsl.edu/shea.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Global Readiness</title>
+		<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"> <!-- Google Font -->
 
-<script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> <!-- Bootstrap Link -->
+		<script>
+			function myCalculation() 
+			{
+				var a11 = a12 = a13 = a14 = a15 = a16 = a17 = a18 = 0;
+				var a21 = a22 = a23 = a24 = a25 = a26 = a27 = a28 = 0;
+				var a31 = a32 = a33 = a34 = a35 = 0;
+				//There should be a mean score for situated, for integrated, for critical, and for intercultural
+				var q11 = document.getElementsByName("Q11");
+				var q12 = document.getElementsByName("Q12");
+				var q13 = document.getElementsByName("Q13");
+				var q14 = document.getElementsByName("Q14");
+				var q15 = document.getElementsByName("Q15");
+				var q16 = document.getElementsByName("Q16");
+				var q17 = document.getElementsByName("Q17");
+				var q18 = document.getElementsByName("Q18");
+				var q21 = document.getElementsByName("Q21");
+				var q22 = document.getElementsByName("Q22");
+				var q23 = document.getElementsByName("Q23");
+				var q24 = document.getElementsByName("Q24");
+				var q25 = document.getElementsByName("Q25");
+				var q26 = document.getElementsByName("Q26");
+				var q27 = document.getElementsByName("Q27");
+				var q28 = document.getElementsByName("Q28");
+				var q31 = document.getElementsByName("Q31");
+				var q32 = document.getElementsByName("Q32");
+				var q33 = document.getElementsByName("Q33");
+				var q34 = document.getElementsByName("Q34");
+				var q35 = document.getElementsByName("Q35");
+				for(i = 0; i < q11.length; i++) { if(q11[i].checked){ a11 = i + 1; break; } }
+				for(i = 0; i < q12.length; i++) { if(q12[i].checked){ a12 = i + 1; break; } }
+				for(i = 0; i < q13.length; i++) { if(q13[i].checked){ a13 = i + 1; break; } }
+				for(i = 0; i < q14.length; i++) { if(q14[i].checked){ a14 = i + 1; break; } }
+				for(i = 0; i < q15.length; i++) { if(q15[i].checked){ a15 = i + 1; break; } }
+				for(i = 0; i < q16.length; i++) { if(q16[i].checked){ a16 = i + 1; break; } }
+				for(i = 0; i < q17.length; i++) { if(q17[i].checked){ a17 = i + 1; break; } }
+				for(i = 0; i < q18.length; i++) { if(q18[i].checked){ a18 = i + 1; break; } }
+				for(i = 0; i < q21.length; i++) { if(q21[i].checked){ a21 = i + 1; break; } }
+				for(i = 0; i < q22.length; i++) { if(q22[i].checked){ a22 = i + 1; break; } }
+				for(i = 0; i < q23.length; i++) { if(q23[i].checked){ a23 = i + 1; break; } }
+				for(i = 0; i < q24.length; i++) { if(q24[i].checked){ a24 = i + 1; break; } }
+				for(i = 0; i < q25.length; i++) { if(q25[i].checked){ a25 = i + 1; break; } }
+				for(i = 0; i < q26.length; i++) { if(q26[i].checked){ a26 = i + 1; break; } }
+				for(i = 0; i < q27.length; i++) { if(q27[i].checked){ a27 = i + 1; break; } }
+				for(i = 0; i < q28.length; i++) { if(q28[i].checked){ a28 = i + 1; break; } }
+				for(i = 0; i < q31.length; i++) { if(q31[i].checked){ a31 = i + 1; break; } }
+				for(i = 0; i < q32.length; i++) { if(q32[i].checked){ a32 = i + 1; break; } }
+				for(i = 0; i < q33.length; i++) { if(q33[i].checked){ a33 = i + 1; break; } }
+				for(i = 0; i < q34.length; i++) { if(q34[i].checked){ a34 = i + 1; break; } }
+				for(i = 0; i < q35.length; i++) { if(q35[i].checked){ a35 = i + 1; break; } }
+				var mean_situated = ( a13 + a16 + a17 + a18 + a32 + a33 + a34 ) / 7.0
+				var mean_integrated = ( a14 + a15 + a25 + a31 ) / 4.0
+				var mean_critical = (a11 + a12 + a21 + a22 + a23 + a24) / 6.0
+				var mean_intercultural = (a26 + a27 + a28 + a35 ) / 4.0
+				document.getElementById("situated").innerHTML = mean_situated.toFixed(2);
+				document.getElementById("critical").innerHTML = mean_critical.toFixed(2);
+				document.getElementById("intercultural").innerHTML = mean_intercultural.toFixed(2);
+				document.getElementById("integrated").innerHTML = mean_integrated.toFixed(2);
+			}
+		</script>
+		<!-- <style>
+			body{
+			/*max-width: 100px;*/
+			width: 99%;
+			margin: 10px auto;
+			text-align: left;
+			font-family: Arial;
+			}
+		</style> -->
+		<style>
+			body
+			{
+				/*font-family: 'Poppins', sans-serif;*/
+				margin: 5px;
+			}
 
-function myCalculation() {
-    var a11 = a12 = a13 = a14 = a15 = a16 = a17 = a18 = 0;
-    var a21 = a22 = a23 = a24 = a25 = a26 = a27 = a28 = 0;
-    var a31 = a32 = a33 = a34 = a35 = 0;
+			#teach 
+				{
+				  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+				  border-collapse: collapse;
+				  width: 100%;
+				}
 
-    //There should be a mean score for situated, for integrated, for critical, and for intercultural
-    var q11 = document.getElementsByName("Q11");
-    var q12 = document.getElementsByName("Q12");
-    var q13 = document.getElementsByName("Q13");
-    var q14 = document.getElementsByName("Q14");
-    var q15 = document.getElementsByName("Q15");
-    var q16 = document.getElementsByName("Q16");
-    var q17 = document.getElementsByName("Q17");
-    var q18 = document.getElementsByName("Q18");
+			#teach td, #teach th 
+				{
+				  border: 1px solid #ddd;
+				  padding: 8px;
+				}
 
-    var q21 = document.getElementsByName("Q21");
-    var q22 = document.getElementsByName("Q22");
-    var q23 = document.getElementsByName("Q23");
-    var q24 = document.getElementsByName("Q24");
-    var q25 = document.getElementsByName("Q25");
-    var q26 = document.getElementsByName("Q26");
-    var q27 = document.getElementsByName("Q27");
-    var q28 = document.getElementsByName("Q28");
+			#teach tr:nth-child(even){background-color: #f2f2f2;}
 
-    var q31 = document.getElementsByName("Q31");
-    var q32 = document.getElementsByName("Q32");
-    var q33 = document.getElementsByName("Q33");
-    var q34 = document.getElementsByName("Q34");
-    var q35 = document.getElementsByName("Q35");
+			#teach tr:hover {background-color: #ddd;}
 
-    for(i = 0; i < q11.length; i++) { if(q11[i].checked){ a11 = i + 1; break; } }
-    for(i = 0; i < q12.length; i++) { if(q12[i].checked){ a12 = i + 1; break; } }
-    for(i = 0; i < q13.length; i++) { if(q13[i].checked){ a13 = i + 1; break; } }
-    for(i = 0; i < q14.length; i++) { if(q14[i].checked){ a14 = i + 1; break; } }
-    for(i = 0; i < q15.length; i++) { if(q15[i].checked){ a15 = i + 1; break; } }
-    for(i = 0; i < q16.length; i++) { if(q16[i].checked){ a16 = i + 1; break; } }
-    for(i = 0; i < q17.length; i++) { if(q17[i].checked){ a17 = i + 1; break; } }
-    for(i = 0; i < q18.length; i++) { if(q18[i].checked){ a18 = i + 1; break; } }
+			#teach th 
+				{
+				  padding-top: 12px;
+				  padding-bottom: 12px;
+				  background-color: #1fc8db;
+				  color: black;
+				
+				  text-align: center;
+				}
+			#calc
+				{
+					width: 20%;
+					margin: 10px;
+				}
+			#calc td
+				{
+					border: 1px solid #ddd;
+					padding: 8px;
+					font-weight: bold;
+				}
+			.result
+				{
+					margin-left: 10%; 
+					font-weight: bold; 
+					font-size: 20px;
+				}
+		</style>
+	</head>
+	<body data-gr-c-s-loaded="true">
+		<div style="text-align: center; padding: 5px; font-size: 50px; background-color: #1fc8db; color: black; background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%)" >
+			<p>Teaching for Global Readiness Sub-Scale Means</p>
+		</div>
+		<br>
+		<table id="teach">
+			<tr>
+				<th>
+					<strong>In the last two weeks, how often have you:</strong>
+				</th>
+				<th>Never </th> 
+				<th>Once in 2 weeks </th> 
+				<th>Once a week </th> 
+				<th>2-3 Times a week </th> 
+				<th>Daily </th>
+			</tr>
+			<!-- <tr>
+				<th></th>
+				
+			</tr> -->
+			<tr>
+				<td>
+					Reflected on your own assumptions and biases?
+				</td>
+				<td align="center"><input name="Q11" type="radio" value="1"></td>
+				<td align="center"><input name="Q11" type="radio" value="2"></td>
+				<td align="center"><input name="Q11" type="radio" value="3"></td>
+				<td align="center"><input name="Q11" type="radio" value="4"></td>
+				<td align="center"><input name="Q11" type="radio" value="5"></td>
+			</tr>
+			<tr>
+				<td>
+					Used texts written by authors from diverse countries?
+				</td>
+				<td align="center"><input name="Q12" type="radio" value="1"></td>
+				<td align="center"><input name="Q12" type="radio" value="2"></td>
+				<td align="center"><input name="Q12" type="radio" value="3"></td>
+				<td align="center"><input name="Q12" type="radio" value="4"></td>
+				<td align="center"><input name="Q12" type="radio" value="5"></td>
+			</tr>
+			<tr>
+				<td>
+					Guided students to examine their cultural identity?
+				</td>
+				<td align="center"><input name="Q13" type="radio" value="1"></td>
+				<td align="center"><input name="Q13" type="radio" value="2"></td>
+				<td align="center"><input name="Q13" type="radio" value="3"></td>
+				<td align="center"><input name="Q13" type="radio" value="4"></td>
+				<td align="center"><input name="Q13" type="radio" value="5"></td>
+			</tr>
+			<tr>
+				<td>
+					Integrated global learning with the existing curriculum?
+				</td>
+				<td align="center"><input name="Q14" type="radio" value="1"></td>
+				<td align="center"><input name="Q14" type="radio" value="2"></td>
+				<td align="center"><input name="Q14" type="radio" value="3"></td>
+				<td align="center"><input name="Q14" type="radio" value="4"></td>
+				<td align="center"><input name="Q14" type="radio" value="5"></td>
+			</tr>
+			<tr>
+				<td>
+				Assessed students' global learning?
+				</td>
+				<td align="center"><input name="Q15" type="radio" value="1"></td>
+				<td align="center"><input name="Q15" type="radio" value="2"></td>
+				<td align="center"><input name="Q15" type="radio" value="3"></td>
+				<td align="center"><input name="Q15" type="radio" value="4"></td>
+				<td align="center"><input name="Q15" type="radio" value="5"></td>
+			</tr>
+			<tr>
+				<td>
+				Provided a space that allows learners to take risks?
+				</td>
+				<td align="center"><input name="Q16" type="radio" value="1"></td>
+				<td align="center"><input name="Q16" type="radio" value="2"></td>
+				<td align="center"><input name="Q16" type="radio" value="3"></td>
+				<td align="center"><input name="Q16" type="radio" value="4"></td>
+				<td align="center"><input name="Q16" type="radio" value="5"></td>
+			</tr>
+			<tr>
+				<td>
+				Provided a space that allows students a voice?
+				</td>
+				<td align="center"><input name="Q17" type="radio" value="1"></td>
+				<td align="center"><input name="Q17" type="radio" value="2"></td>
+				<td align="center"><input name="Q17" type="radio" value="3"></td>
+				<td align="center"><input name="Q17" type="radio" value="4"></td>
+				<td align="center"><input name="Q17" type="radio" value="5"></td>
+			</tr>
+			<tr>
+				<td>
+				Attempted to break down students' stereotypes?
+				</td>
+				<td align="center"><input name="Q18" type="radio" value="1"></td>
+				<td align="center"><input name="Q18" type="radio" value="2"></td>
+				<td align="center"><input name="Q18" type="radio" value="3"></td>
+				<td align="center"><input name="Q18" type="radio" value="4"></td>
+				<td align="center"><input name="Q18" type="radio" value="5"></td>
+			</tr>
+		</table>
+	
+		<br>
+		<table id="teach">
+			<tr>
+				<th>
+					<strong>In the last two weeks, how often have you asked students to:</strong>
+				</th>
+				<th>Never </th> 
+				<th>Once in 2 weeks </th> 
+				<th>Once a week </th> 
+				<th>2-3 Times a week </th> 
+				<th>Daily </th>
+			</tr>
+			<tr>
+				<td>
+				Engage in discussions about international current events?
+				</td>
+				<td align="center"><input name="Q21" type="radio" value="1"></td>
+				<td align="center"><input name="Q21" type="radio" value="2"></td>
+				<td align="center"><input name="Q21" type="radio" value="3"></td>
+				<td align="center"><input name="Q21" type="radio" value="4"></td>
+				<td align="center"><input name="Q21" type="radio" value="5"></td>
+			</tr>
+			<tr>
+				<td>
+				Analyze the reliability of a source?
+				</td>
+				<td align="center"><input name="Q22" type="radio" value="1"></td>
+				<td align="center"><input name="Q22" type="radio" value="2"></td>
+				<td align="center"><input name="Q22" type="radio" value="3"></td>
+				<td align="center"><input name="Q22" type="radio" value="4"></td>
+				<td align="center"><input name="Q22" type="radio" value="5"></td>
+				</tr>
+			<tr>
+				<td>
+				Analyze the agenda behind media messages?
+				</td>
+				<td align="center"><input name="Q23" type="radio" value="1"></td>
+				<td align="center"><input name="Q23" type="radio" value="2"></td>
+				<td align="center"><input name="Q23" type="radio" value="3"></td>
+				<td align="center"><input name="Q23" type="radio" value="4"></td>
+				<td align="center"><input name="Q23" type="radio" value="5"></td>
+			</tr>
+			<tr>
+				<td>
+				Construct claims based on primary sources?
+				</td>
+				<td align="center"><input name="Q24" type="radio" value="1"></td>
+				<td align="center"><input name="Q24" type="radio" value="2"></td>
+				<td align="center"><input name="Q24" type="radio" value="3"></td>
+				<td align="center"><input name="Q24" type="radio" value="4"></td>
+				<td align="center"><input name="Q24" type="radio" value="5"></td>
+			</tr>
+			<tr>
+				<td>
+				Use inquiry-based lessons about the world (e.g., research projects, exploratory learning, discovery learning)?
+				</td>
+				<td align="center"><input name="Q25" type="radio" value="1"></td>
+				<td align="center"><input name="Q25" type="radio" value="2"></td>
+				<td align="center"><input name="Q25" type="radio" value="3"></td>
+				<td align="center"><input name="Q25" type="radio" value="4"></td>
+				<td align="center"><input name="Q25" type="radio" value="5"></td>
+			</tr>
+			<tr>
+				<td>
+				Utilize technology (e.g., Skype, email) for virtual interviews (with experts, community members, etc.)?
+				</td>
+				<td align="center"><input name="Q26" type="radio" value="1"></td>
+				<td align="center"><input name="Q26" type="radio" value="2"></td>
+				<td align="center"><input name="Q26" type="radio" value="3"></td>
+				<td align="center"><input name="Q26" type="radio" value="4"></td>
+				<td align="center"><input name="Q26" type="radio" value="5"></td>
+			</tr>
+			<tr>
+				<td>
+				Utilize asynchronous technology (e.g., email, blogs) for international collaboration?
+				</td>
+				<td align="center"><input name="Q27" type="radio" value="1"></td>
+				<td align="center"><input name="Q27" type="radio" value="2"></td>
+				<td align="center"><input name="Q27" type="radio" value="3"></td>
+				<td align="center"><input name="Q27" type="radio" value="4"></td>
+				<td align="center"><input name="Q27" type="radio" value="5"></td>
+			</tr>
+			<tr>
+				<td>
+				Utilize synchronous technology (e.g., Skype, Google Hangout, FaceTime) for international collaboration?
+				</td>
+				<td align="center"><input name="Q28" type="radio" value="1"></td>
+				<td align="center"><input name="Q28" type="radio" value="2"></td>
+				<td align="center"><input name="Q28" type="radio" value="3"></td>
+				<td align="center"><input name="Q28" type="radio" value="4"></td>
+				<td align="center"><input name="Q28" type="radio" value="5"></td>
+			</tr>
+		</table>
 
-    for(i = 0; i < q21.length; i++) { if(q21[i].checked){ a21 = i + 1; break; } }
-    for(i = 0; i < q22.length; i++) { if(q22[i].checked){ a22 = i + 1; break; } }
-    for(i = 0; i < q23.length; i++) { if(q23[i].checked){ a23 = i + 1; break; } }
-    for(i = 0; i < q24.length; i++) { if(q24[i].checked){ a24 = i + 1; break; } }
-    for(i = 0; i < q25.length; i++) { if(q25[i].checked){ a25 = i + 1; break; } }
-    for(i = 0; i < q26.length; i++) { if(q26[i].checked){ a26 = i + 1; break; } }
-    for(i = 0; i < q27.length; i++) { if(q27[i].checked){ a27 = i + 1; break; } }
-    for(i = 0; i < q28.length; i++) { if(q28[i].checked){ a28 = i + 1; break; } }
-
-    for(i = 0; i < q31.length; i++) { if(q31[i].checked){ a31 = i + 1; break; } }
-    for(i = 0; i < q32.length; i++) { if(q32[i].checked){ a32 = i + 1; break; } }
-    for(i = 0; i < q33.length; i++) { if(q33[i].checked){ a33 = i + 1; break; } }
-    for(i = 0; i < q34.length; i++) { if(q34[i].checked){ a34 = i + 1; break; } }
-    for(i = 0; i < q35.length; i++) { if(q35[i].checked){ a35 = i + 1; break; } }
-
-    var mean_situated = ( a13 + a16 + a17 + a18 + a32 + a33 + a34 ) / 7.0
-    var mean_integrated = ( a14 + a15 + a25 + a31 ) / 4.0
-    var mean_critical = (a11 + a12 + a21 + a22 + a23 + a24) / 6.0
-    var mean_intercultural = (a26 + a27 + a28 + a35 ) / 4.0
-
-    document.getElementById("situated").innerHTML = mean_situated.toFixed(2);
-    document.getElementById("critical").innerHTML = mean_critical.toFixed(2);
-    document.getElementById("intercultural").innerHTML = mean_intercultural.toFixed(2);
-    document.getElementById("integrated").innerHTML = mean_integrated.toFixed(2);
-}
-
-</script>
-
-<style>
-body{
-    max-width: 1000px;
-    width: 98%;
-    margin: 10px auto;
-    text-align: left;
-    font-family: Arial;
-}
-</style>
-
-</head>
-
-<body data-gr-c-s-loaded="true">
-
-<center><b>Teaching for Global Readiness Sub-Scale Means</b></center>
-
-<br>
-
-<table>
-<tbody>
-<tr>
-<td>
-    <b>In the last two weeks, how often have you: </b>
-</td>
-</tr>
-<tr>
-<td></td><td align="center">&nbsp;Never&nbsp; </td> <td align="center">&nbsp;Once in 2 weeks&nbsp; </td> <td align="center">&nbsp;Once a week&nbsp; </td> <td align="center">&nbsp;2-3 Times a week&nbsp; </td> <td align="center">&nbsp;Daily&nbsp; </td>
-</tr>
-
-<tr><td>
-Reflected on your own assumptions and biases?
-</td>
-<td align="center"><input name="Q11" type="radio" value="1"></td>
-<td align="center"><input name="Q11" type="radio" value="2"></td>
-<td align="center"><input name="Q11" type="radio" value="3"></td>
-<td align="center"><input name="Q11" type="radio" value="4"></td>
-<td align="center"><input name="Q11" type="radio" value="5"></td>
-</tr>
-
-<tr><td>
-Used texts written by authors from diverse countries?
-</td>
-<td align="center"><input name="Q12" type="radio" value="1"></td>
-<td align="center"><input name="Q12" type="radio" value="2"></td>
-<td align="center"><input name="Q12" type="radio" value="3"></td>
-<td align="center"><input name="Q12" type="radio" value="4"></td>
-<td align="center"><input name="Q12" type="radio" value="5"></td>
-</tr>
-
-<tr><td>
-Guided students to examine their cultural identity?
-</td>
-<td align="center"><input name="Q13" type="radio" value="1"></td>
-<td align="center"><input name="Q13" type="radio" value="2"></td>
-<td align="center"><input name="Q13" type="radio" value="3"></td>
-<td align="center"><input name="Q13" type="radio" value="4"></td>
-<td align="center"><input name="Q13" type="radio" value="5"></td>
-</tr>
-
-<tr><td>
-Integrated global learning with the existing curriculum?
-</td>
-<td align="center"><input name="Q14" type="radio" value="1"></td>
-<td align="center"><input name="Q14" type="radio" value="2"></td>
-<td align="center"><input name="Q14" type="radio" value="3"></td>
-<td align="center"><input name="Q14" type="radio" value="4"></td>
-<td align="center"><input name="Q14" type="radio" value="5"></td>
-</tr>
-
-<tr><td>
-Assessed students' global learning?
-</td>
-<td align="center"><input name="Q15" type="radio" value="1"></td>
-<td align="center"><input name="Q15" type="radio" value="2"></td>
-<td align="center"><input name="Q15" type="radio" value="3"></td>
-<td align="center"><input name="Q15" type="radio" value="4"></td>
-<td align="center"><input name="Q15" type="radio" value="5"></td>
-</tr>
-
-<tr><td>
-Provided a space that allows learners to take risks?
-</td>
-<td align="center"><input name="Q16" type="radio" value="1"></td>
-<td align="center"><input name="Q16" type="radio" value="2"></td>
-<td align="center"><input name="Q16" type="radio" value="3"></td>
-<td align="center"><input name="Q16" type="radio" value="4"></td>
-<td align="center"><input name="Q16" type="radio" value="5"></td>
-</tr>
-
-<tr><td>
-Provided a space that allows students a voice?
-</td>
-<td align="center"><input name="Q17" type="radio" value="1"></td>
-<td align="center"><input name="Q17" type="radio" value="2"></td>
-<td align="center"><input name="Q17" type="radio" value="3"></td>
-<td align="center"><input name="Q17" type="radio" value="4"></td>
-<td align="center"><input name="Q17" type="radio" value="5"></td>
-</tr>
-
-<tr><td>
-Attempted to break down students' stereotypes?
-</td>
-<td align="center"><input name="Q18" type="radio" value="1"></td>
-<td align="center"><input name="Q18" type="radio" value="2"></td>
-<td align="center"><input name="Q18" type="radio" value="3"></td>
-<td align="center"><input name="Q18" type="radio" value="4"></td>
-<td align="center"><input name="Q18" type="radio" value="5"></td>
-</tr>
-
-</tbody></table>
-
-<br>
-
-<table>
-
-<tr><td width="600px">
-<b>In the last two weeks, how often have you asked students to:</b>
-</td>
-</tr>
-
-<tr>
-<td></td><td align="center">&nbsp;Never&nbsp; </td> <td align="center">&nbsp;Once in 2 weeks&nbsp; </td> <td align="center">&nbsp;Once a week&nbsp; </td> <td align="center">&nbsp;2-3 Times a week&nbsp; </td> <td align="center">&nbsp;Daily&nbsp; </td>
-</tr>
-
-<tr><td>
-Engage in discussions about international current events?
-</td>
-<td align="center"><input name="Q21" type="radio" value="1"></td>
-<td align="center"><input name="Q21" type="radio" value="2"></td>
-<td align="center"><input name="Q21" type="radio" value="3"></td>
-<td align="center"><input name="Q21" type="radio" value="4"></td>
-<td align="center"><input name="Q21" type="radio" value="5"></td>
-</tr>
-
-<tr><td>
-Analyze the reliability of a source?
-</td>
-<td align="center"><input name="Q22" type="radio" value="1"></td>
-<td align="center"><input name="Q22" type="radio" value="2"></td>
-<td align="center"><input name="Q22" type="radio" value="3"></td>
-<td align="center"><input name="Q22" type="radio" value="4"></td>
-<td align="center"><input name="Q22" type="radio" value="5"></td>
-</tr>
-
-<tr><td>
-Analyze the agenda behind media messages?
-</td>
-<td align="center"><input name="Q23" type="radio" value="1"></td>
-<td align="center"><input name="Q23" type="radio" value="2"></td>
-<td align="center"><input name="Q23" type="radio" value="3"></td>
-<td align="center"><input name="Q23" type="radio" value="4"></td>
-<td align="center"><input name="Q23" type="radio" value="5"></td>
-</tr>
-
-<tr><td>
-Construct claims based on primary sources?
-</td>
-<td align="center"><input name="Q24" type="radio" value="1"></td>
-<td align="center"><input name="Q24" type="radio" value="2"></td>
-<td align="center"><input name="Q24" type="radio" value="3"></td>
-<td align="center"><input name="Q24" type="radio" value="4"></td>
-<td align="center"><input name="Q24" type="radio" value="5"></td>
-</tr>
-
-<tr><td>
-Use inquiry-based lessons about the world (e.g., research projects, exploratory learning, discovery learning)?
-</td>
-<td align="center"><input name="Q25" type="radio" value="1"></td>
-<td align="center"><input name="Q25" type="radio" value="2"></td>
-<td align="center"><input name="Q25" type="radio" value="3"></td>
-<td align="center"><input name="Q25" type="radio" value="4"></td>
-<td align="center"><input name="Q25" type="radio" value="5"></td>
-</tr>
-
-<tr><td>
-Utilize technology (e.g., Skype, email) for virtual interviews (with experts, community members, etc.)?
-</td>
-<td align="center"><input name="Q26" type="radio" value="1"></td>
-<td align="center"><input name="Q26" type="radio" value="2"></td>
-<td align="center"><input name="Q26" type="radio" value="3"></td>
-<td align="center"><input name="Q26" type="radio" value="4"></td>
-<td align="center"><input name="Q26" type="radio" value="5"></td>
-</tr>
-
-<tr><td>
-Utilize asynchronous technology (e.g., email, blogs) for international collaboration?
-</td>
-<td align="center"><input name="Q27" type="radio" value="1"></td>
-<td align="center"><input name="Q27" type="radio" value="2"></td>
-<td align="center"><input name="Q27" type="radio" value="3"></td>
-<td align="center"><input name="Q27" type="radio" value="4"></td>
-<td align="center"><input name="Q27" type="radio" value="5"></td>
-</tr>
-
-<tr><td>
-Utilize synchronous technology (e.g., Skype, Google Hangout, FaceTime) for international collaboration?
-</td>
-<td align="center"><input name="Q28" type="radio" value="1"></td>
-<td align="center"><input name="Q28" type="radio" value="2"></td>
-<td align="center"><input name="Q28" type="radio" value="3"></td>
-<td align="center"><input name="Q28" type="radio" value="4"></td>
-<td align="center"><input name="Q28" type="radio" value="5"></td>
-</tr>
-</tbody></table>
-
-<br>
-<table>
-
-<tr><td width="600px">
-<b>During a typical semester, I:</b>
-</td>
-</tr>
-
-<tr>
-<td></td><td align="center">&nbsp;Strongly Disagree&nbsp; </td> <td align="center">&nbsp;Disagree&nbsp; </td> <td align="center">&nbsp;Neigher Agree nor Disagree&nbsp; </td> <td align="center">&nbsp;Agree&nbsp; </td> <td align="center">&nbsp;Strongly Agree&nbsp; </td>
-</tr>
-
-<tr><td>
-I built a repertoire of resources related to global education.
-</td>
-<td align="center"><input name="Q31" type="radio" value="1"></td>
-<td align="center"><input name="Q31" type="radio" value="2"></td>
-<td align="center"><input name="Q31" type="radio" value="3"></td>
-<td align="center"><input name="Q31" type="radio" value="4"></td>
-<td align="center"><input name="Q31" type="radio" value="5"></td>
-</tr>
-
-<tr><td>
-I take inventory of the cultures (languages, countries, etc.) represented by my students.
-</td>
-<td align="center"><input name="Q32" type="radio" value="1"></td>
-<td align="center"><input name="Q32" type="radio" value="2"></td>
-<td align="center"><input name="Q32" type="radio" value="3"></td>
-<td align="center"><input name="Q32" type="radio" value="4"></td>
-<td align="center"><input name="Q32" type="radio" value="5"></td>
-</tr>
-
-<tr><td>
-I cultivate a classroom environment that values diversity.
-</td>
-<td align="center"><input name="Q33" type="radio" value="1"></td>
-<td align="center"><input name="Q33" type="radio" value="2"></td>
-<td align="center"><input name="Q33" type="radio" value="3"></td>
-<td align="center"><input name="Q33" type="radio" value="4"></td>
-<td align="center"><input name="Q33" type="radio" value="5"></td>
-</tr>
-
-<tr><td>
-I cultivate a classroom environment that promotes equality.
-</td>
-<td align="center"><input name="Q34" type="radio" value="1"></td>
-<td align="center"><input name="Q34" type="radio" value="2"></td>
-<td align="center"><input name="Q34" type="radio" value="3"></td>
-<td align="center"><input name="Q34" type="radio" value="4"></td>
-<td align="center"><input name="Q34" type="radio" value="5"></td>
-</tr>
-
-<tr><td>
-I bring in speakers from different backgrounds so that students can listen to different perspectives.
-</td>
-<td align="center"><input name="Q35" type="radio" value="1"> </td>
-<td align="center"><input name="Q35" type="radio" value="2"> </td>
-<td align="center"><input name="Q35" type="radio" value="3"> </td>
-<td align="center"><input name="Q35" type="radio" value="4"> </td>
-<td align="center"><input name="Q35" type="radio" value="5"> </td>
-</tr>
-</tbody></table>
-
-<center>
-<br>
-<button onclick="myCalculation()">Calculate My Score</button>
-</center>
-
-<br>
-<b>My results:</b>
-<table>
-<tbody><tr><td>Situated</td><td id="situated">-</td></tr>
-<tr><td>Integrated</td><td id="integrated">-</td></tr>
-<tr><td>Critical</td><td id="critical">-</td></tr>
-<tr><td>Intercultural</td><td id="intercultural">-</td></tr>
-
-
-
-
-</tbody></table></body></html>
+		<br>
+		<table id= "teach">
+			<tr>
+				<th >
+					<strong>During a typical semester, I:</strong>
+				</th>
+				<th>Strong Disagree </th> 
+				<th>Disagree </th> 
+				<th>Neigher Agree nor Disagree </th> 
+				<th>Agree  </th>
+				<th>Strongly Agree </th>
+			</tr>
+			<tr>
+				<td>
+					I built a repertoire of resources related to global education.
+				</td>
+				<td align="center"><input name="Q31" type="radio" value="1"></td>
+				<td align="center"><input name="Q31" type="radio" value="2"></td>
+				<td align="center"><input name="Q31" type="radio" value="3"></td>
+				<td align="center"><input name="Q31" type="radio" value="4"></td>
+				<td align="center"><input name="Q31" type="radio" value="5"></td>
+			</tr>
+			<tr>
+				<td>
+				I take inventory of the cultures (languages, countries, etc.) represented by my students.
+				</td>
+				<td align="center"><input name="Q32" type="radio" value="1"></td>
+				<td align="center"><input name="Q32" type="radio" value="2"></td>
+				<td align="center"><input name="Q32" type="radio" value="3"></td>
+				<td align="center"><input name="Q32" type="radio" value="4"></td>
+				<td align="center"><input name="Q32" type="radio" value="5"></td>
+			</tr>
+			<tr>
+				<td>
+				I cultivate a classroom environment that values diversity.
+				</td>
+				<td align="center"><input name="Q33" type="radio" value="1"></td>
+				<td align="center"><input name="Q33" type="radio" value="2"></td>
+				<td align="center"><input name="Q33" type="radio" value="3"></td>
+				<td align="center"><input name="Q33" type="radio" value="4"></td>
+				<td align="center"><input name="Q33" type="radio" value="5"></td>
+			</tr>
+			<tr>
+				<td>
+				I cultivate a classroom environment that promotes equality.
+				</td>
+				<td align="center"><input name="Q34" type="radio" value="1"></td>
+				<td align="center"><input name="Q34" type="radio" value="2"></td>
+				<td align="center"><input name="Q34" type="radio" value="3"></td>
+				<td align="center"><input name="Q34" type="radio" value="4"></td>
+				<td align="center"><input name="Q34" type="radio" value="5"></td>
+			</tr>
+			<tr>
+				<td>
+				I bring in speakers from different backgrounds so that students can listen to different perspectives.
+				</td>
+				<td align="center"><input name="Q35" type="radio" value="1"> </td>
+				<td align="center"><input name="Q35" type="radio" value="2"> </td>
+				<td align="center"><input name="Q35" type="radio" value="3"> </td>
+				<td align="center"><input name="Q35" type="radio" value="4"> </td>
+				<td align="center"><input name="Q35" type="radio" value="5"> </td>
+			</tr>
+		</table>
+			<br>
+			<br>
+		<div class="col-md-12 center-block" >
+			<button onclick="myCalculation()" class= "btn btn-primary center-block">Calculate My Score</button>
+		</div>
+		<!-- <center>
+			
+			<button onclick="myCalculation()">Calculate My Score</button>
+		</center> -->
+		<br>
+		<div class="result"> 
+			My results:
+		</div>
+		<table id="calc">
+			<tbody>
+				<tr>
+					<td>Situated</td>
+					<td id="situated">-</td>
+				</tr>
+				<tr>
+					<td>Integrated</td>
+					<td id="integrated">-</td>
+				</tr>
+				<tr>
+					<td>Critical</td>
+					<td id="critical">-</td>
+				</tr>
+				<tr>
+					<td>Intercultural</td>
+					<td id="intercultural">-</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
